@@ -1,0 +1,35 @@
+import java.util.Scanner;
+
+public class Metric {
+    public static void main(String[] args) {
+        Scanner in = new Scanner(System.in);
+        double meter = 0;
+        double miles = 0;
+        double feet = 0;
+        double inches = 0;
+        String trash;
+        System.out.println("Enter the value for meters:");
+
+        if (in.hasNextDouble())
+        {
+        meter=in.nextDouble();
+        }
+        else
+        {
+            trash= in.nextLine();
+            System.out.println("You enter an inccorect value");
+            System.out.println("Run the program again and enter a correct value");
+            System.exit(0);
+        }
+        //Calculate the meters to miles
+        miles=meter* 0.000621371;
+
+        //Calculate the meters to feet
+        feet=meter*3.28084;
+
+        //Calculate meters to inches
+        inches= meter*  39.3701;
+
+        System.out.println("The miles is " + miles);
+        System.out.println("The feet is " + feet);
+        System.out.println("The inches is " + inches);
